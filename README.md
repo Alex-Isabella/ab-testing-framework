@@ -18,5 +18,5 @@ jupyter notebook notebooks/
 
 ## About
 Built by Alex Isabella — Marketing & Product Data Analyst
-- [LinkedIn](#)
+- [LinkedIn](#https://www.linkedin.com/in/alex-isabella-332a41164/)
 - [Tableau Portfolio](#)
