@@ -1,0 +1,76 @@
+{
+  "scenario1": {
+    "test": "Two-Proportion Z-Test",
+    "control_rate": 0.080333,
+    "variant_rate": 0.094667,
+    "absolute_lift": 0.014333,
+    "relative_lift_pct": 17.84,
+    "z_statistic": 2.7784,
+    "p_value": 0.005464,
+    "alpha": 0.05,
+    "is_significant": true,
+    "ci_control": [
+      0.073456,
+      0.087211
+    ],
+    "ci_variant": [
+      0.087259,
+      0.102074
+    ],
+    "interpretation": "\u2705 Statistically significant. Variant CVR (9.47%) vs Control (8.03%). Relative lift: 17.8% (p=0.0055).",
+    "practical": {
+      "observed_lift_pct": 17.84,
+      "minimum_business_lift_pct": 10.0,
+      "is_practically_significant": true,
+      "interpretation": "\u2705 Lift of 17.8% exceeds business threshold of 10.0%."
+    },
+    "verdict": "SHIP IT"
+  },
+  "scenario2": {
+    "test": "Mann-Whitney U Test",
+    "control_median": 45.2536,
+    "variant_median": 44.9842,
+    "median_lift": -0.2694,
+    "median_lift_pct": -0.6,
+    "u_statistic": 12455461.0,
+    "p_value": 0.757659,
+    "alpha": 0.05,
+    "is_significant": false,
+    "note": "Reports median lift (not mean) \u2014 appropriate for skewed distributions.",
+    "interpretation": "\u274c Not statistically significant (p=0.7577).",
+    "practical": {
+      "observed_lift_pct": -0.6,
+      "minimum_business_lift_pct": 5.0,
+      "is_practically_significant": false,
+      "interpretation": "\u26a0\ufe0f Lift of -0.6% is below business threshold of 5.0%. Statistically significant but may not be worth shipping."
+    },
+    "verdict": "DO NOT SHIP"
+  },
+  "scenario3": {
+    "test": "Two-Proportion Z-Test",
+    "control_rate": 0.0635,
+    "variant_rate": 0.069,
+    "absolute_lift": 0.0055,
+    "relative_lift_pct": 8.66,
+    "z_statistic": 1.3986,
+    "p_value": 0.161942,
+    "alpha": 0.05,
+    "is_significant": false,
+    "ci_control": [
+      0.058156,
+      0.068844
+    ],
+    "ci_variant": [
+      0.063446,
+      0.074554
+    ],
+    "interpretation": "\u274c Not statistically significant (p=0.1619). Cannot conclude the variant outperforms control.",
+    "practical": {
+      "observed_lift_pct": 8.66,
+      "minimum_business_lift_pct": 5.0,
+      "is_practically_significant": true,
+      "interpretation": "\u2705 Lift of 8.7% exceeds business threshold of 5.0%."
+    },
+    "verdict": "EXTEND EXPERIMENT"
+  }
+}
